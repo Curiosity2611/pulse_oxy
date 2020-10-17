@@ -9,5 +9,6 @@
     "*.md": "markdown",
     "*.mdx": "tdx",
     "stdio.h": "c"
-  }
+  },
+  "C_Cpp.errorSquiggles": "Disabled"
 }
