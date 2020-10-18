@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/CMakeFiles/bootloader
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/CMakeFiles/bootloader.rule
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/CMakeFiles/bootloader-complete.rule
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/deepakreddy/esp/esp-programs/pulse_oxy/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule

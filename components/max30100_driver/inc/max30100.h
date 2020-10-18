@@ -32,20 +32,20 @@ When an interrupt enable bit is set to zero, the corresponding interrupt appears
 in the interrupt status register, but the INT pin is not pulled low.
 */
 #define MAX_30100_INT_ENABLE                  0x01U
-uint8_t MAX30100_ENABLE_SPO2_RDY_INT        = 0x10;
-uint8_t MAX30100_DISABLE_SPO2_RDY_INT       = 0x00;
+#define  MAX30100_ENABLE_SPO2_RDY_INT         0x10
+#define  MAX30100_DISABLE_SPO2_RDY_INT        0x00
 
-uint8_t MAX30100_ENABLE_HR_RDY_INT          = 0x20;
-uint8_t MAX30100_DISABLE_HR_RDY_INT         = 0x00;
+#define  MAX30100_ENABLE_HR_RDY_INT           0x20
+#define  MAX30100_DISABLE_HR_RDY_INT          0x00
 
-uint8_t MAX30100_ENABLE_TEMP_RDY_INT        = 0x40;
-uint8_t MAX30100_DISABLE_TEMP_RDY_INT       = 0x00;
+#define  MAX30100_ENABLE_TEMP_RDY_INT         0x40
+#define  MAX30100_DISABLE_TEMP_RDY_INT        0x00
 
-uint8_t MAX30100_ENABLE_FIFO_AFULL_INT      = 0x80;
-uint8_t MAX30100_DISABLE_FIFO_AFULL_INT     = 0x00;
+#define  MAX30100_ENABLE_FIFO_AFULL_INT       0x80
+#define  MAX30100_DISABLE_FIFO_AFULL_INT      0x00
 
-uint8_t MAX30100_ENABLE_ALL_INTERRUPTS      = 0xF0;
-uint8_t MAX30100_DISABLE_ALL_INTERRUPTS     = 0x00;
+#define  MAX30100_ENABLE_ALL_INTERRUPTS       0xF0
+#define  MAX30100_DISABLE_ALL_INTERRUPTS      0x00
 
 /*
 The FIFO write pointer points to the location where the MAX30100 writes the next sample
@@ -121,78 +121,78 @@ STOP;
 /* Mode Configuration */
 #define MAX_30100_MODE_CONFIG_REG                           0x06U
 /* Bit 7: Shutdown Control (SHDN) */
-uint8_t MAX_30100_MODE_SHUT_DOWN                          = 0x80;
+#define  MAX_30100_MODE_SHUT_DOWN                           0x80
 /* Bit 6: Reset Control (RESET) */
-uint8_t MAX_30100_MODE_RESET                              = 0x40;
+#define  MAX_30100_MODE_RESET                               0x40
 /* Bit 3: Temperature Enable (TEMP_EN) */
-uint8_t MAX_30100_EN_TEMP                                 = 0x08;
+#define MAX_30100_EN_TEMP  0x08
 /* Bits 2:0: Mode Control */
-uint8_t MAX30100_MODE_HR_ONLY                             = 0x02;
-uint8_t MAX30100_MODE_SPO2_EN                             = 0x03;
+#define  MAX30100_MODE_HR_ONLY                              0x02
+#define  MAX30100_MODE_SPO2_EN                              0x03
 
 
 /* SPO2 configuration */
 #define MAX_30100_SPO2_CONFIG                             0x07U
 
 /* Bit 6: SpO2 High Resolution Enable (SPO2_HI_RES_EN) */
-uint8_t MAX_30100_SPO2_HI_RES_EN = 0x40;
+#define  MAX_30100_SPO2_HI_RES_EN = 0x40;
 
 /* Bit 4:2: SpO2 Sample Rate Control */
-uint8_t MAX_30100_SPO2_SR_50_PER_SEC                    = 0x00;
-uint8_t MAX_30100_SPO2_SR_100_PER_SEC                   = 0x04;
-uint8_t MAX_30100_SPO2_SR_167_PER_SEC                   = 0x08;
-uint8_t MAX_30100_SPO2_SR_200_PER_SEC                   = 0x0C;
-uint8_t MAX_30100_SPO2_SR_400_PER_SEC                   = 0x10;
-uint8_t MAX_30100_SPO2_SR_600_PER_SEC                   = 0x14;
-uint8_t MAX_30100_SPO2_SR_800_PER_SEC                   = 0x18;
-uint8_t MAX_30100_SPO2_SR_1000_PER_SEC                  = 0x1C;
+#define  MAX_30100_SPO2_SR_50_PER_SEC                      0x00
+#define  MAX_30100_SPO2_SR_100_PER_SEC                     0x04
+#define  MAX_30100_SPO2_SR_167_PER_SEC                     0x08
+#define  MAX_30100_SPO2_SR_200_PER_SEC                     0x0C
+#define  MAX_30100_SPO2_SR_400_PER_SEC                     0x10
+#define  MAX_30100_SPO2_SR_600_PER_SEC                     0x14
+#define  MAX_30100_SPO2_SR_800_PER_SEC                     0x18
+#define  MAX_30100_SPO2_SR_1000_PER_SEC                    0x1C
 
 /* Bits 1:0: LED Pulse Width Control */
-uint8_t MAX_30100_LED_PW_200_us                         = 0x00;
-uint8_t MAX_30100_LED_PW_400_us                         = 0x01;
-uint8_t MAX_30100_LED_PW_800_us                         = 0x02;
-uint8_t MAX_30100_LED_PW_1600_us                        = 0x03;
+#define  MAX_30100_LED_PW_200_us                           0x00
+#define  MAX_30100_LED_PW_400_us                           0x01
+#define  MAX_30100_LED_PW_800_us                           0x02
+#define  MAX_30100_LED_PW_1600_us                          0x03
 
 
 /* LED configuration */
 #define MAX_30100_LED_CONFIG                             0x09U
 
 /* Bits 7:4: Red LED Current Control */
-uint8_t MAX_30100_RED_LED_CURRENT_0_MA                 = 0x00;
-uint8_t MAX_30100_RED_LED_CURRENT_4_MA                 = 0x10;
-uint8_t MAX_30100_RED_LED_CURRENT_8_MA                 = 0x20;
-uint8_t MAX_30100_RED_LED_CURRENT_11_MA                = 0x30;
-uint8_t MAX_30100_RED_LED_CURRENT_14_MA                = 0x40;
-uint8_t MAX_30100_RED_LED_CURRENT_17_MA                = 0x50;
-uint8_t MAX_30100_RED_LED_CURRENT_21_MA                = 0x60;
-uint8_t MAX_30100_RED_LED_CURRENT_24_MA                = 0x70;
-uint8_t MAX_30100_RED_LED_CURRENT_27_MA                = 0x80;
-uint8_t MAX_30100_RED_LED_CURRENT_30_MA                = 0x90;
-uint8_t MAX_30100_RED_LED_CURRENT_33_MA                = 0xA0;
-uint8_t MAX_30100_RED_LED_CURRENT_37_MA                = 0xB0;
-uint8_t MAX_30100_RED_LED_CURRENT_40_MA                = 0xC0;
-uint8_t MAX_30100_RED_LED_CURRENT_43_MA                = 0xD0;
-uint8_t MAX_30100_RED_LED_CURRENT_46_MA                = 0xE0;
-uint8_t MAX_30100_RED_LED_CURRENT_50_MA                = 0xF0;
+#define  MAX_30100_RED_LED_CURRENT_0_MA                   0x00
+#define  MAX_30100_RED_LED_CURRENT_4_MA                   0x10
+#define  MAX_30100_RED_LED_CURRENT_8_MA                   0x20
+#define  MAX_30100_RED_LED_CURRENT_11_MA                  0x30
+#define  MAX_30100_RED_LED_CURRENT_14_MA                  0x40
+#define  MAX_30100_RED_LED_CURRENT_17_MA                  0x50
+#define  MAX_30100_RED_LED_CURRENT_21_MA                  0x60
+#define  MAX_30100_RED_LED_CURRENT_24_MA                  0x70
+#define  MAX_30100_RED_LED_CURRENT_27_MA                  0x80
+#define  MAX_30100_RED_LED_CURRENT_30_MA                  0x90
+#define  MAX_30100_RED_LED_CURRENT_33_MA                  0xA0
+#define  MAX_30100_RED_LED_CURRENT_37_MA                  0xB0
+#define  MAX_30100_RED_LED_CURRENT_40_MA                  0xC0
+#define  MAX_30100_RED_LED_CURRENT_43_MA                  0xD0
+#define  MAX_30100_RED_LED_CURRENT_46_MA                  0xE0
+#define  MAX_30100_RED_LED_CURRENT_50_MA                  0xF0
 
 
 /* Bits 3:0: IR LED Current Control */
-uint8_t MAX_30100_IR_LED_CURRENT_0_MA                 = 0x00;
-uint8_t MAX_30100_IR_LED_CURRENT_4_MA                 = 0x01;
-uint8_t MAX_30100_IR_LED_CURRENT_8_MA                 = 0x02;
-uint8_t MAX_30100_IR_LED_CURRENT_11_MA                = 0x03;
-uint8_t MAX_30100_IR_LED_CURRENT_14_MA                = 0x04;
-uint8_t MAX_30100_IR_LED_CURRENT_17_MA                = 0x05;
-uint8_t MAX_30100_IR_LED_CURRENT_21_MA                = 0x06;
-uint8_t MAX_30100_IR_LED_CURRENT_24_MA                = 0x07;
-uint8_t MAX_30100_IR_LED_CURRENT_27_MA                = 0x08;
-uint8_t MAX_30100_IR_LED_CURRENT_30_MA                = 0x09;
-uint8_t MAX_30100_IR_LED_CURRENT_33_MA                = 0x0A;
-uint8_t MAX_30100_IR_LED_CURRENT_37_MA                = 0x0B;
-uint8_t MAX_30100_IR_LED_CURRENT_40_MA                = 0x0C;
-uint8_t MAX_30100_IR_LED_CURRENT_43_MA                = 0x0D;
-uint8_t MAX_30100_IR_LED_CURRENT_46_MA                = 0x0E;
-uint8_t MAX_30100_IR_LED_CURRENT_50_MA                = 0x0F;
+#define  MAX_30100_IR_LED_CURRENT_0_MA                    0x00
+#define  MAX_30100_IR_LED_CURRENT_4_MA                    0x01
+#define  MAX_30100_IR_LED_CURRENT_8_MA                    0x02
+#define  MAX_30100_IR_LED_CURRENT_11_MA                   0x03
+#define  MAX_30100_IR_LED_CURRENT_14_MA                   0x04
+#define  MAX_30100_IR_LED_CURRENT_17_MA                   0x05
+#define  MAX_30100_IR_LED_CURRENT_21_MA                   0x06
+#define  MAX_30100_IR_LED_CURRENT_24_MA                   0x07
+#define  MAX_30100_IR_LED_CURRENT_27_MA                   0x08
+#define  MAX_30100_IR_LED_CURRENT_30_MA                   0x09
+#define  MAX_30100_IR_LED_CURRENT_33_MA                   0x0A
+#define  MAX_30100_IR_LED_CURRENT_37_MA                   0x0B
+#define  MAX_30100_IR_LED_CURRENT_40_MA                   0x0C
+#define  MAX_30100_IR_LED_CURRENT_43_MA                   0x0D
+#define  MAX_30100_IR_LED_CURRENT_46_MA                   0x0E
+#define  MAX_30100_IR_LED_CURRENT_50_MA                   0x0F
 
 
 /* Temperature Register */
